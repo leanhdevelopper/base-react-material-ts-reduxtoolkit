@@ -1,0 +1,16 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
