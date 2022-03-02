@@ -1,35 +1,12 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 
-import {
-  loadRootKeys,
-  loadRootState,
-  ORDER_BUDDY_STATE,
-  removeStateStorage,
-  saveRootKeys,
-  saveRootState,
-} from 'utils/localStorage';
-
-const reducer = {
-  home: homeReducer,
-};
+const reducer = {};
 
 export function initStore() {
-
-  const preloadedState = {};
-
-  const preloadedKeys: any[] = loadRootKeys() || [];
-  
-
   const store = configureStore({
     reducer,
-    preloadedState: preloadedState ? preloadedState : {},
   });
 
-
-  store.subscribe(() => {
-    saveRootKeys(preloadedKeys);
-    saveRootState(store.getState(), key);
-  });
   return store;
 }
 

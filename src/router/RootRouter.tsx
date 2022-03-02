@@ -1,3 +1,4 @@
+import HomePage from 'features/HomePage/HomePage';
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
@@ -7,7 +8,7 @@ function RootRouter() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="*" render={() => <NotFound />} />
+        <Route path="/" render={() => <HomePage />} />
       </Switch>
     </BrowserRouter>
   );
